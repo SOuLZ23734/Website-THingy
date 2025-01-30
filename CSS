@@ -1,0 +1,156 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Font */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #0066cc; /* Light Blue */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffcc00; /* Yellow on hover */
+}
+
+/* Main Section */
+main {
+    padding: 30px 15px;
+    background-color: #fff;
+}
+
+.welcome {
+    text-align: center;
+    padding: 30px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.news, .courses-list, .staff-list {
+    margin-top: 30px;
+}
+
+.news h3, .courses-list h2, .staff-list h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Course and Staff Lists */
+.courses-list ul, .staff-list ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.courses-list li, .staff-list li {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.courses-list li:hover, .staff-list li:hover {
+    transform: translateY(-5px);
+    background-color: #e6f7ff; /* Light Blue hover */
+}
+
+.courses-list li {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #333;
+}
+
+.staff-list li {
+    font-size: 1em;
+    font-weight: 400;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0066cc;
+    color: white;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .welcome {
+        padding: 20px;
+    }
+
+    .courses-list ul, .staff-list ul {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}
